@@ -2,6 +2,7 @@ import Vue from 'vue';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import Axios from 'axios';
 import App from './App.vue';
+import store from './store';
 
 Vue.config.productionTip = false;
 
@@ -13,5 +14,6 @@ Axios.defaults.params = {};
 Axios.defaults.params.key = 'AIzaSyDcEOfVnOfuh0KCFRIx1BucqhO7mJKBhjg';
 
 new Vue({
-  render: h => h(App),
+  store,
+  render: h => h(App)
 }).$mount('#app');

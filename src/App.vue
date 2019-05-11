@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <main id="app" class="container">
     <search-book/>
-  </div>
+  </main>
 </template>
 
 <script>
