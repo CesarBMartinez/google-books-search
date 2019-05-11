@@ -11,6 +11,8 @@
       <!-- Submit Button -->
       <button type="submit" class="btn btn-primary mt-3">Search</button>
     </form>
+
+    <h6 class="text-left text-secondary mt-3">{{ $store.state.totalItems }} results for '{{ $store.state.searchParam }}'</h6>
   </div>
 </template>
 
