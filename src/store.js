@@ -26,10 +26,12 @@ export default new Vuex.Store({
   },
   actions: {
     search({ commit, state }, searchParam) {
+      // if searchParam, update state before request
       if (searchParam) {
         commit('UPDATE_SEARCH_PARAM', searchParam);
       }
 
+      // Request books
       return Axios.get('volumes', {
         params: {
           q: state.searchParam

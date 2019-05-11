@@ -25,8 +25,9 @@ export default {
   methods: {
     dispatchSearch() {
       if (this.searchInput) {
-        this.$store.dispatch('search', this.searchInput);
+        return this.$store.dispatch('search', this.searchInput);
       }
+      return false;
     }
   }
 };
