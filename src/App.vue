@@ -1,16 +1,19 @@
 <template>
   <main id="app" class="container">
-    <search-book/>
+    <search-book />
+    <list-items />
   </main>
 </template>
 
 <script>
 import SearchBook from './components/SearchBook.vue';
+import ListItems from './components/ListItems.vue';
 
 export default {
   name: 'app',
   components: {
-    SearchBook
+    SearchBook,
+    ListItems
   },
 };
 </script>
