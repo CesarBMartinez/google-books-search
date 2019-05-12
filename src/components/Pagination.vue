@@ -2,7 +2,7 @@
   <nav aria-label="Page navigation">
     <ul class="pagination justify-content-center" v-show="totalItems > 0">
       <!-- First Page -->
-      <li class="page-item" :class="{ disabled: currentPage === 1}">
+      <li class="page-item d-none d-sm-block" :class="{ disabled: currentPage === 1}">
         <a class="page-link" href="#" @click.prevent="changePage(1)">First</a>
       </li>
       <!-- Previous Page -->
@@ -18,7 +18,7 @@
         <a class="page-link" @click.prevent="changePage(currentPage + 1)" href="#">Next</a>
       </li>
       <!-- Last Page -->
-      <li class="page-item" :class="{ disabled: currentPage === pagesTotal.length }">
+      <li class="page-item d-none d-sm-block" :class="{ disabled: currentPage === pagesTotal.length }">
         <a class="page-link" @click.prevent="changePage(pagesTotal.length)" href="#">Last</a>
       </li>
     </ul>
