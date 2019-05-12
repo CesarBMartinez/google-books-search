@@ -50,14 +50,13 @@ export default new Vuex.Store({
           maxResults: state.itemsPerPage
         }
       }).then((response) => {
-        console.log(response);
         if (response.data.totalItems > 0 && response.data.hasOwnProperty('items')) {
           commit('SUCCESS', response.data);
         } else {
           commit('NO_RESULTS');
         }
       }).catch(() => {
-        commit('ERROR');
+        commit('NO_RESULTS');
       });
     }
   }
