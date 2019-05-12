@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class="list-unstyled">
-      <li class="media py-4" v-for="(item, index) in items" :key="index">
+      <li class="media py-4" v-for="(item, index) in items" :key="item.id">
         <img :src="thumbnail(item)" class="mr-3" :alt="item.volumeInfo.title">
         <div class="media-body">
           <!-- Title -->

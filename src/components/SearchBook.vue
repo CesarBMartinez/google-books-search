@@ -12,7 +12,9 @@
       <button type="submit" class="btn btn-primary mt-3">Search</button>
     </form>
 
-    <h6 class="text-left text-secondary mt-3">{{ $store.state.totalItems }} results for '{{ $store.state.searchParam }}'</h6>
+    <!-- Results Message -->
+    <h6 class="text-left text-secondary mt-3" v-show="$store.state.searchParam || $store.state.totalItems > 0">
+      {{ $store.state.totalItems }} results for '{{ $store.state.searchParam }}'</h6>
   </div>
 </template>
 
@@ -27,7 +29,7 @@ export default {
   methods: {
     dispatchSearch() {
       if (this.searchInput) {
-        return this.$store.dispatch('search', this.searchInput);
+        return this.$store.dispatch('search', { searchParam: this.searchInput });
       }
       return false;
     }
